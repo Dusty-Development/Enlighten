@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dark_chromatic_brick_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enlighten:dark_chromatic_brick_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:dark_polished_chromatic_stairs_from_dark_chromatic_brick_slab_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dark_chromatic_brick_slab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:dark_polished_chromatic_stairs_from_dark_chromatic_brick_slab_stonecutting"
+    ]
+  }
+}

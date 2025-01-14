@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_nebulite_scaffolding": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enlighten:nebulite_scaffolding"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:caution_nebulite_slab_from_nebulite_scaffolding_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_nebulite_scaffolding"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:caution_nebulite_slab_from_nebulite_scaffolding_stonecutting"
+    ]
+  }
+}

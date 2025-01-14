@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "enlighten:chromatic_pillar"
+  },
+  "result": {
+    "count": 1,
+    "id": "enlighten:polished_chromatic_wall"
+  }
+}

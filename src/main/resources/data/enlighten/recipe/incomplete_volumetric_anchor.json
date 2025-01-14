@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "#L#",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:crying_obsidian"
+        },
+        "L": {
+            "item": "minecraft:lodestone"
+        }
+    },
+    "result": {
+        "id": "enlighten:incomplete_volumetric_anchor",
+        "count": 1
+    }
+}

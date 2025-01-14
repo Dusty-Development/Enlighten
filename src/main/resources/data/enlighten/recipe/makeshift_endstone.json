@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:sculk_catalyst"
+        },
+        {
+            "item": "minecraft:ender_eye"
+        },
+        {
+            "item": "minecraft:soul_soil"
+        },
+        {
+            "item": "enlighten:begrimed_mire_bucket"
+        }
+    ],
+    "result": {
+        "id": "minecraft:end_stone",
+        "count": 8
+    }
+}

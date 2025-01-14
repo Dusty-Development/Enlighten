@@ -1,0 +1,21 @@
+{
+  "type": "enlighten:whispering_abyss_type",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "enlighten:quiet_plains",
+      "lakes": false,
+      "features": false,
+      "layers": [
+        {
+          "block": "enlighten:encased_mire",
+          "height": 127
+        },
+        {
+          "block": "enlighten:begrimed_mire_fluid",
+          "height": 1
+        }
+      ]
+    }
+  }
+}

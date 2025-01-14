@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "enlighten:block/chromatic",
+    "side": "enlighten:block/chromatic",
+    "top": "enlighten:block/chromatic"
+  }
+}

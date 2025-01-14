@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "enlighten:block/caution_nebulite",
+    "side": "enlighten:block/caution_nebulite",
+    "top": "enlighten:block/caution_nebulite"
+  }
+}

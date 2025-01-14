@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "enlighten:block/dark_chromatic_pillar_top",
+    "side": "enlighten:block/dark_chromatic_pillar"
+  }
+}

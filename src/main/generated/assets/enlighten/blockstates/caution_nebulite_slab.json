@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "enlighten:block/caution_nebulite_slab"
+    },
+    "type=double": {
+      "model": "enlighten:block/caution_nebulite"
+    },
+    "type=top": {
+      "model": "enlighten:block/caution_nebulite_slab_top"
+    }
+  }
+}

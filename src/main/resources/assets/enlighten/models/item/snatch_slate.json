@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "enlighten:item/snatch_slate/snatch_slate_off"
+  },
+  "overrides": [
+    {
+      "predicate": { "enlighten:can_activate": 0}, "model": "enlighten:item/snatch_slate_off"
+    },
+    {
+      "predicate": { "enlighten:can_activate": 1.0}, "model": "enlighten:item/snatch_slate_on"
+    }
+  ]
+}

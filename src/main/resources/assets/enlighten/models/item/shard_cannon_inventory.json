@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "enlighten:item/shard_cannon/shard_cannon_inventory"
+  }
+}

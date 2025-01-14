@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "enlighten:item/volumetric_anchor/volumetric_anchor_3"
+  }
+}

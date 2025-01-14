@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "enlighten:dark_chromatic_wall",
+    "enlighten:dark_chromatic_brick_wall",
+    "enlighten:dark_polished_chromatic_wall",
+    "enlighten:chromatic_wall",
+    "enlighten:chromatic_brick_wall",
+    "enlighten:polished_chromatic_wall",
+    "enlighten:light_chromatic_wall",
+    "enlighten:light_chromatic_brick_wall",
+    "enlighten:light_polished_chromatic_wall"
+  ]
+}

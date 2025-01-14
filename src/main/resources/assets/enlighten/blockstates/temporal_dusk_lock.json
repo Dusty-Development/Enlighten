@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=false": { "model": "enlighten:block/temporal_dusk_lock/temporal_dusk_lock" },
+    "powered=true": { "model": "enlighten:block/temporal_dusk_lock/temporal_dusk_lock_active" }
+  }
+}

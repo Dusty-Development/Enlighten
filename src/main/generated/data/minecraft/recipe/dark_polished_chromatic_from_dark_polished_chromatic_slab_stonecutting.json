@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "enlighten:dark_polished_chromatic_slab"
+  },
+  "result": {
+    "count": 1,
+    "id": "enlighten:dark_polished_chromatic"
+  }
+}

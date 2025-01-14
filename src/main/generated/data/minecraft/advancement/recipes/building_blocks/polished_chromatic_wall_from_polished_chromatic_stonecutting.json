@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polished_chromatic": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enlighten:polished_chromatic"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:polished_chromatic_wall_from_polished_chromatic_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polished_chromatic"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:polished_chromatic_wall_from_polished_chromatic_stonecutting"
+    ]
+  }
+}

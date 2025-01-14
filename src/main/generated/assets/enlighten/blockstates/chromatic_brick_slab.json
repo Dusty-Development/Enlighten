@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "enlighten:block/chromatic_brick_slab"
+    },
+    "type=double": {
+      "model": "enlighten:block/chromatic_bricks"
+    },
+    "type=top": {
+      "model": "enlighten:block/chromatic_brick_slab_top"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "enlighten:item/snare_stone/snare_stone_off"
+  },
+  "overrides": [
+    {
+      "predicate": { "enlighten:entity_id": 0}, "model": "enlighten:item/snare_stone_off"
+    },
+    {
+      "predicate": { "enlighten:entity_id": 1.0}, "model": "enlighten:item/snare_stone_on"
+    }
+  ]
+}

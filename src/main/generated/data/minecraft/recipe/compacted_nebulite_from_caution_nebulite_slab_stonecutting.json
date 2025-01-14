@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "enlighten:caution_nebulite_slab"
+  },
+  "result": {
+    "count": 1,
+    "id": "enlighten:compacted_nebulite"
+  }
+}

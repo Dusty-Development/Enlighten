@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "enlighten:begrimed_mire_bucket"
+    },
+    {
+      "item": "minecraft:chorus_fruit"
+    }
+  ],
+  "result": {
+    "id": "enlighten:begrimed_chorus_fruit",
+    "count": 1
+  }
+}

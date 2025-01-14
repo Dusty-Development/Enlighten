@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "enlighten:block/dark_polished_chromatic_slab"
+    },
+    "type=double": {
+      "model": "enlighten:block/dark_polished_chromatic"
+    },
+    "type=top": {
+      "model": "enlighten:block/dark_polished_chromatic_slab_top"
+    }
+  }
+}

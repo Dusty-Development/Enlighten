@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dented_nebulite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enlighten:dented_nebulite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:nebulite_scaffolding_from_dented_nebulite_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dented_nebulite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:nebulite_scaffolding_from_dented_nebulite_stonecutting"
+    ]
+  }
+}

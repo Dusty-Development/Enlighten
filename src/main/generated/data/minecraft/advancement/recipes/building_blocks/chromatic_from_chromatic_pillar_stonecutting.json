@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chromatic_pillar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enlighten:chromatic_pillar"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:chromatic_from_chromatic_pillar_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chromatic_pillar"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:chromatic_from_chromatic_pillar_stonecutting"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "enlighten:compacted_nebulite"
+  },
+  "result": {
+    "count": 1,
+    "id": "enlighten:dented_nebulite_stairs"
+  }
+}

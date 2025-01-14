@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "enlighten:block/dark_chromatic_bricks",
+    "side": "enlighten:block/dark_chromatic_bricks",
+    "top": "enlighten:block/dark_chromatic_bricks"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "enlighten:block/light_polished_chromatic"
+  }
+}

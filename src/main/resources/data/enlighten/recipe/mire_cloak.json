@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#D#"
+  ],
+  "key": {
+    "#": {
+      "item": "enlighten:begrimed_mire_cloth"
+    },
+    "D": {
+      "item": "minecraft:netherite_chestplate"
+    }
+  },
+  "result": {
+    "id": "enlighten:mire_cloak",
+    "count": 1
+  }
+}

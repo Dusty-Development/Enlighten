@@ -1,0 +1,23 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "enlighten:item/volumetric_anchor/volumetric_anchor_0"
+  },
+  "overrides": [
+    {
+      "predicate": { "enlighten:charge_count": 0}, "model": "enlighten:item/volumetric_anchor_0"
+    },
+    {
+      "predicate": { "enlighten:charge_count": 0.25}, "model": "enlighten:item/volumetric_anchor_1"
+    },
+    {
+      "predicate": { "enlighten:charge_count": 0.5}, "model": "enlighten:item/volumetric_anchor_2"
+    },
+    {
+      "predicate": { "enlighten:charge_count": 0.75}, "model": "enlighten:item/volumetric_anchor_3"
+    },
+    {
+      "predicate": { "enlighten:charge_count": 1.0}, "model": "enlighten:item/volumetric_anchor_4"
+    }
+  ]
+}

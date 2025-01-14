@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_nebulite_support": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enlighten:nebulite_support"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:chiseled_nebulite_from_nebulite_support_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_nebulite_support"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:chiseled_nebulite_from_nebulite_support_stonecutting"
+    ]
+  }
+}

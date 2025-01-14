@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "package": "net.dustley.enlighten.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "wish_contract.EbonizedWishAntiPickupMixin",
+    "parry.AllowFloorProjectileToBeAttackedEntityMixin",
+    "parry.PlayerParryProjectileMixin",
+    "parry.AllowProjectileToBeHitMixin",
+    "inventory.RespawnAnchorRecipesMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "render.RenderCloakSmallerMixin",
+    "inventory.RendererSmallItemInInventoryMixin",
+    "render.LoadModelsMixin"
+  ]
+}

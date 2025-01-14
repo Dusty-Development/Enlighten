@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "enlighten:block/dented_nebulite",
+    "side": "enlighten:block/dented_nebulite",
+    "top": "enlighten:block/dented_nebulite"
+  }
+}

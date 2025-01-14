@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "enlighten:chiseled_nebulite"
+  },
+  "result": {
+    "count": 1,
+    "id": "enlighten:nebulite_pillar"
+  }
+}

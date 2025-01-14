@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "enlighten:nebulite_scaffolding"
+  },
+  "result": {
+    "count": 1,
+    "id": "enlighten:dented_nebulite_slab"
+  }
+}

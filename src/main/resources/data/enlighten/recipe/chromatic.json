@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "enlighten:dark_chromatic"
+        },
+        {
+            "item": "enlighten:light_chromatic"
+        }
+    ],
+    "result": {
+        "id": "enlighten:chromatic",
+        "count": 2
+    }
+}

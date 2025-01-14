@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polished_chromatic_stairs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "enlighten:polished_chromatic_stairs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:chromatic_stairs_from_polished_chromatic_stairs_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polished_chromatic_stairs"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:chromatic_stairs_from_polished_chromatic_stairs_stonecutting"
+    ]
+  }
+}

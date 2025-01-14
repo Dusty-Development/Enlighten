@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "nnH",
+        "/C "
+    ],
+    "key": {
+        "n": {
+            "item": "minecraft:netherite_ingot"
+        },
+        "H": {
+            "item": "minecraft:heavy_core"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        },
+        "C": {
+            "item": "minecraft:copper_bulb"
+        }
+    },
+    "result": {
+        "id": "enlighten:shard_cannon",
+        "count": 1
+    }
+}

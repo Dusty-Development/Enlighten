@@ -1,0 +1,61 @@
+{
+	"schemaVersion": 1,
+	"id": "enlighten",
+	"version": "${version}",
+	"name": "Enlighten",
+	"description": "OOOOOOooooooo.... Pretty!",
+	"authors": [
+		"Dustley"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/enlighten/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "net.dustley.enlighten.Enlighten",
+				"adapter": "kotlin"
+			}
+		],
+		"cardinal-components-scoreboard": [
+			{
+				"value": "net.dustley.enlighten.EnlightenCardinalComponents",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"adapter": "kotlin",
+				"value": "net.dustley.enlighten.EnlightenClient"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "net.dustley.enlighten.EnlightenDataGenerator",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"enlighten.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	},
+	"custom": {
+		"cardinal-components": [
+			"enlighten:contracted_player"
+		]
+	}
+}
