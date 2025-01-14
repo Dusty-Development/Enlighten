@@ -34,6 +34,8 @@ run/
 
 # java
 
+./kotlin
+
 hs_err_*.log
 replay_*.log
 *.hprof
