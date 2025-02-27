@@ -4,8 +4,14 @@ import net.dustley.enlighten.Enlighten
 import net.dustley.enlighten.entity.ebonized_wish.EbonizedWishEntity
 import net.dustley.enlighten.entity.ebonized_wish.EbonizedWishEntityRenderer
 import net.dustley.enlighten.entity.weeper_leviathan.WeeperLeviathanEntity
+import net.dustley.enlighten.entity.weeper_leviathan.render.WeeperLeviathanEntityRenderer
+import net.dustley.enlighten.entity.weeper_leviathan.render.WeeperLeviathanModel
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry
+import net.fabricmc.fabric.api.`object`.builder.v1.entity.FabricDefaultAttributeRegistry
 import net.minecraft.client.render.entity.EmptyEntityRenderer
+import net.minecraft.client.render.entity.model.EntityModelLayer
+import net.minecraft.client.render.entity.model.EntityModelLayers
 import net.minecraft.entity.EntityType
 import net.minecraft.entity.SpawnGroup
 import net.minecraft.registry.Registries
@@ -37,19 +43,19 @@ object ModEntities {
                         type: EntityType<WeeperLeviathanEntity>,
                         world -> WeeperLeviathanEntity(world, type)
                 }), SpawnGroup.MISC)
-                .dimensions(1.5f,1.5f)
+                .dimensions(2f,2f)
                 .build("weeper_leviathan")
         )
 
 
     fun registerModEntities() {
-
+        FabricDefaultAttributeRegistry.register(WEEPER_LEVIATHAN, WeeperLeviathanEntity.createEntityAttributes());
     }
 
     fun registerClientModEntities() {
         EntityRendererRegistry.register(EBONIZED_WISH, ::EbonizedWishEntityRenderer)
 
-//        EntityModelLayerRegistry.registerModelLayer(WeeperLeviathanModel.MODEL, WeeperLeviathanModel::getTexturedModelData)
-        EntityRendererRegistry.register(WEEPER_LEVIATHAN, ::EmptyEntityRenderer)
+        EntityModelLayerRegistry.registerModelLayer(WeeperLeviathanModel.modelLayer, WeeperLeviathanModel::getTexturedModelData)
+        EntityRendererRegistry.register(WEEPER_LEVIATHAN) { ctx -> WeeperLeviathanEntityRenderer(ctx, WeeperLeviathanModel(ctx.getPart(WeeperLeviathanModel.modelLayer))) }
     }
 }

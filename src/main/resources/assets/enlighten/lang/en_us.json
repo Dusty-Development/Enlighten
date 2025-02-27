@@ -51,6 +51,8 @@
   "block.enlighten.dented_nebulite_slab": "Dented Nebulite Slab",
   "block.enlighten.chiseled_nebulite": "Chiseled Nebulite",
   "block.enlighten.caution_nebulite": "Caution Nebulite",
+  "block.enlighten.caution_nebulite_stairs": "Caution Nebulite Stairs",
+  "block.enlighten.caution_nebulite_slab": "Caution Nebulite Slab",
   "block.enlighten.nebulite_rebar": "Nebulite Rebar",
   "block.enlighten.nebulite_support": "Nebulite Support",
   "block.enlighten.nebulite_scaffolding": "Nebulite Scaffolding",
@@ -68,5 +70,13 @@
   "item.enlighten.snare_stone": "Snare Stone",
   "item.enlighten.snatch_slate": "Snatch Slate",
   "item.enlighten.shard_cannon": "Shard Cannon",
-  "item.enlighten.ebonized_wish": "Ebonized Wish"
+  "item.enlighten.ebonized_wish": "Ebonized Wish",
+
+  "item.enlighten.mire_rose_clip": "Mire Rose Hair clip",
+  "item.enlighten.mire_dandelion_clip": "Mire Dandelion Hair clip",
+  "item.enlighten.mire_peony_clip": "Mire Peony Hair clip",
+  "item.enlighten.mire_lily_clip": "Mire Lily Hair clip",
+  "item.enlighten.mire_wisp_clip": "Mire Wisp Hair clip",
+  "item.enlighten.mire_monocle": "Mire Monocle"
+
 }

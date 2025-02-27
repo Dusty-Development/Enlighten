@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "enlighten:mire_rose_clip",
+    "enlighten:mire_dandelion_clip",
+    "enlighten:mire_peony_clip",
+    "enlighten:mire_lily_clip",
+    "enlighten:mire_wisp_clip",
+    "enlighten:mire_monocle"
+  ]
+}

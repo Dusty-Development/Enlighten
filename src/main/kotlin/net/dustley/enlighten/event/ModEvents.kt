@@ -9,6 +9,7 @@ import net.dustley.enlighten.world.ModDimensions
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents
+import net.minecraft.entity.MovementType
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.ItemStack
 import net.minecraft.particle.ParticleTypes
@@ -69,7 +70,8 @@ object ModEvents {
 
                 val correction = direction.multiply((MAX_DISTANCE - distance))
                 val pos = entityPos.add(correction)
-                snaredEntity.setPos(pos.x, pos.y, pos.z)
+//                snaredEntity.setPos(pos.x, pos.y, pos.z)
+                snaredEntity.move(MovementType.SELF, correction)
             }
 
             val particles = distance * 3
@@ -83,7 +85,7 @@ object ModEvents {
 
             if(distance >= MAX_DISTANCE * 2) stack.set(ModItemComponents.ENTITY_ID, -1)
         } else {
-            stack.set(ModItemComponents.ENTITY_ID, -1)
+//            stack.set(ModItemComponents.ENTITY_ID, -1)
         }
     }
 

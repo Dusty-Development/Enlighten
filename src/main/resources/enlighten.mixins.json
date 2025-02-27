@@ -3,18 +3,19 @@
   "package": "net.dustley.enlighten.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "wish_contract.EbonizedWishAntiPickupMixin",
+    "inventory.RespawnAnchorRecipesMixin",
     "parry.AllowFloorProjectileToBeAttackedEntityMixin",
-    "parry.PlayerParryProjectileMixin",
     "parry.AllowProjectileToBeHitMixin",
-    "inventory.RespawnAnchorRecipesMixin"
+    "parry.PlayerParryProjectileMixin",
+    "wish_contract.EbonizedWishAntiPickupMixin"
   ],
   "injectors": {
     "defaultRequire": 1
   },
   "client": [
-    "render.RenderCloakSmallerMixin",
     "inventory.RendererSmallItemInInventoryMixin",
-    "render.LoadModelsMixin"
+    "render.HideArmorMixin",
+    "render.LoadModelsMixin",
+    "render.ScaleShownArmorMixin"
   ]
 }

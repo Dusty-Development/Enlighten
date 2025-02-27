@@ -22,9 +22,10 @@ class SnareStoneItem : Item(createItemSettings()) {
             val snatchedEntity = getClosestEntity(user, 5.0)
             val snatchedID = snatchedEntity?.id
 
-            if(snatchedID != null && user.getStackInHand(hand)?.isEmpty == false) {
+            if(snatchedID != null) {
                 for (player in world.players) {
                     ServerPlayNetworking.send(player as ServerPlayerEntity?, SnareStoneClientPacketPayload(snatchedID, snatcherID, user.getStackInHand(hand)))
+                    setSnaredEntityID(user.getStackInHand(hand), snatchedID)
                 }
             }
         }

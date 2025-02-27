@@ -1,11 +1,13 @@
 package net.dustley.enlighten.entity.weeper_leviathan
 
+import com.google.common.collect.ImmutableCollection
 import com.google.common.collect.ImmutableList
 import com.mojang.serialization.Dynamic
 import net.minecraft.entity.EntityType
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.ai.brain.Brain
 import net.minecraft.entity.ai.brain.MemoryModuleType
+import net.minecraft.entity.ai.brain.sensor.Sensor
 import net.minecraft.entity.ai.brain.sensor.SensorType
 import net.minecraft.entity.ai.control.MoveControl
 import net.minecraft.entity.ai.control.YawAdjustingLookControl
@@ -33,7 +35,7 @@ class WeeperLeviathanEntity(world: World, entityType: EntityType<out PathAwareEn
 
     init {
         this.moveControl = MoveControl(this)
-        this.lookControl = YawAdjustingLookControl(this, 10)
+        this.lookControl = YawAdjustingLookControl(this, 15)
     }
 
     //==// AI \\==\\
@@ -42,11 +44,11 @@ class WeeperLeviathanEntity(world: World, entityType: EntityType<out PathAwareEn
         return SwimNavigation(this, world)
     }
 
-    override fun createBrainProfile(): Brain.Profile<*>? {
-        return Brain.createProfile(MEMORY_MODULES, SENSORS)
+    override fun createBrainProfile(): Brain.Profile<WeeperLeviathanEntity>? {
+        return Brain.createProfile<WeeperLeviathanEntity>(MEMORY_MODULES, SENSORS as ImmutableList<SensorType<Sensor<WeeperLeviathanEntity>>>)
     }
 
-    override fun deserializeBrain(dynamic: Dynamic<*>): Brain<out LivingEntity>? {
+    override fun deserializeBrain(dynamic: Dynamic<*>): Brain<WeeperLeviathanEntity>? {
         return createBrainProfile()?.let { WeeperLeviathanBrain.create(it.deserialize(dynamic)) }
     }
 
@@ -60,27 +62,21 @@ class WeeperLeviathanEntity(world: World, entityType: EntityType<out PathAwareEn
         getBrain().tick(world as ServerWorld, this)
         world.profiler.pop()
         world.profiler.push("weeperLeviathanActivityUpdate")
-//        WeeperLeviathanBrain.updateActivities(this)
+        WeeperLeviathanBrain.updateActivities(this)
         world.profiler.pop()
         super.mobTick()
     }
-
-    fun createWeeperLeviathanAttributes(): DefaultAttributeContainer.Builder {
-        return createMobAttributes().add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 1.0)
-            .add(EntityAttributes.GENERIC_MAX_HEALTH, 6.0)
-    }
-
 
     override fun getAmbientSound(): SoundEvent? {
         return null
     }
 
     override fun getHurtSound(source: DamageSource?): SoundEvent? {
-        return SoundEvents.ENTITY_WARDEN_HURT
+        return SoundEvents.BLOCK_ANVIL_USE
     }
 
     override fun getDeathSound(): SoundEvent? {
-        return SoundEvents.ENTITY_WARDEN_DEATH
+        return SoundEvents.BLOCK_BELL_USE
     }
 
     override fun sendAiDebugData() {
@@ -95,11 +91,10 @@ class WeeperLeviathanEntity(world: World, entityType: EntityType<out PathAwareEn
     companion object {
         val SENSORS = ImmutableList.of(
             SensorType.NEAREST_LIVING_ENTITIES,
-            SensorType.NEAREST_PLAYERS,
-//            SensorType.HURT_BY,
-//            SensorType.FROG_TEMPTATIONS
-        );
-        val MEMORY_MODULES = ImmutableList.of(
+            SensorType.NEAREST_PLAYERS
+        )
+
+        val MEMORY_MODULES: ImmutableCollection<MemoryModuleType<out Any>> = ImmutableList.of(
             MemoryModuleType.LOOK_TARGET,
             MemoryModuleType.VISIBLE_MOBS,
             MemoryModuleType.WALK_TARGET,
@@ -111,7 +106,7 @@ class WeeperLeviathanEntity(world: World, entityType: EntityType<out PathAwareEn
 //            MemoryModuleType.TEMPTING_PLAYER,
 //            MemoryModuleType.BREED_TARGET,
 //            MemoryModuleType.IS_PANICKING
-        );
+        )
 
         fun createEntityAttributes(): DefaultAttributeContainer.Builder {
             return createMobAttributes()

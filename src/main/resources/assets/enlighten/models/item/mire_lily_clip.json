@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "enlighten:item/armor/mire_lily_clip"
+  }
+}

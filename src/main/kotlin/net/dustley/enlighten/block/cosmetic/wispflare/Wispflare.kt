@@ -1,6 +1,7 @@
 package net.dustley.enlighten.block.cosmetic.wispflare
 
 import com.mojang.serialization.MapCodec
+import net.dustley.enlighten.particle.ModParticles
 import net.minecraft.block.BlockState
 import net.minecraft.block.IceBlock
 import net.minecraft.block.PlantBlock
@@ -10,6 +11,8 @@ import net.minecraft.entity.vehicle.BoatEntity
 import net.minecraft.fluid.Fluids
 import net.minecraft.particle.ParticleTypes
 import net.minecraft.server.world.ServerWorld
+import net.minecraft.sound.SoundCategory
+import net.minecraft.sound.SoundEvents
 import net.minecraft.util.math.BlockPos
 import net.minecraft.util.math.Vec3d
 import net.minecraft.util.math.random.Random
@@ -52,9 +55,23 @@ class Wispflare(settings: Settings) : PlantBlock(settings) {
 
         val centerPos = pos.toCenterPos()
         val direction = Vec3d(1.0,1.0,1.0).rotateY(random.nextFloat() * 0.5f).normalize()
-        val velocity = direction.multiply(0.05, 0.1, 0.05)
+        val velHorizontal = 0.25
+        val velVertical = 0.5
+        val velocity = direction.multiply(velHorizontal, velVertical, velHorizontal)
 
-        world.addParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, centerPos.x, centerPos.y, centerPos.z, velocity.x, velocity.y, velocity.z)
+        if (random.nextDouble() >= 0.75) {
+            world.playSound(centerPos.x, centerPos.y, centerPos.z, SoundEvents.BLOCK_AMETHYST_BLOCK_RESONATE, SoundCategory.BLOCKS, 0.25f, 0.1f, true)
+
+            world.addParticle(
+                ModParticles.WISP_PARTICLE,
+                centerPos.x,
+                centerPos.y,
+                centerPos.z,
+                velocity.x,
+                velocity.y,
+                velocity.z
+            )
+        }
     }
 
 }

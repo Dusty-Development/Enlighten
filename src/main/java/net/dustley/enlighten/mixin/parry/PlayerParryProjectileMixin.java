@@ -21,7 +21,7 @@ public class PlayerParryProjectileMixin {
         if(target instanceof ProjectileEntity) {
             Vec3d pos = self.getEyePos().add(self.getRotationVector().normalize().multiply(0.25));
             target.setPosition(pos);
-            self.getWorld().addParticle(ParticleTypes.FLASH, pos.getX(), pos.getY(), pos.getZ(), 0.0, 0.0, 0.0);
+            self.getWorld().addParticle(ParticleTypes.FLASH, pos.getX(), pos.getY(), pos.getZ(), self.getVelocity().x, self.getVelocity().y, self.getVelocity().z);
             self.playSound(SoundEvents.BLOCK_NOTE_BLOCK_CHIME.value(), 1F, 1.2F);
 
             Vec3d vel = self.getRotationVector().normalize().multiply(Math.max(1.5, target.getVelocity().length())).multiply(2.0);

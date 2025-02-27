@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:amethyst_shard"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "tag": "minecraft:flowers"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "item": "minecraft:lilypad"
+    }
+  ],
+  "result": {
+    "id": "enlighten:wispflare",
+    "count": 1
+  }
+}

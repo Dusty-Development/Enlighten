@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:lily_of_the_valley"
+    }
+  ],
+  "result": {
+    "id": "enlighten:mire_lily_clip",
+    "count": 1
+  }
+}

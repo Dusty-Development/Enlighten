@@ -14,7 +14,7 @@ class MireDripParticle(world: ClientWorld?, x: Double, y: Double, z: Double, pri
          this.velocityY = velocityY
          this.velocityZ = velocityZ
          this.gravityStrength = 0.07f
-         this.collidesWithWorld = true; // Ensures it doesn't get blocked
+         this.collidesWithWorld = true;
          this.maxAge = ((64.0 / (Math.random() * 0.8 + 0.2)).toInt())
          this.setSpriteForAge(sprites)
     }

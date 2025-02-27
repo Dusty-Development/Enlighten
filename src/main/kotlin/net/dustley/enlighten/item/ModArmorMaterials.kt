@@ -14,7 +14,16 @@ import java.util.function.Supplier
 
 object ModArmorMaterials {
 
-    val MIRE_CLOAK_MAT = registerMaterial("mire_cloak", java.util.Map.of(ArmorItem.Type.HELMET, 0, ArmorItem.Type.CHESTPLATE, 8, ArmorItem.Type.LEGGINGS, 0, ArmorItem.Type.BOOTS, 0), 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, { Ingredient.ofItems(ModItems.BEGRIMED_MIRE_CLOTH) }, 3.0f, 0.05f, false)
+    val MIRE_CLOAK_MAT = registerMaterial("mire_cloak", java.util.Map.of(
+        ArmorItem.Type.HELMET, 2,
+        ArmorItem.Type.CHESTPLATE, 7,
+        ArmorItem.Type.LEGGINGS, 0,
+        ArmorItem.Type.BOOTS, 0),
+        15,
+        SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
+        { Ingredient.ofItems(ModItems.BEGRIMED_MIRE_CLOTH) },
+        2.5f,
+        0.0f, false)
 
     private fun registerMaterial(id: String, defensePoints: Map<ArmorItem.Type?, Int?>, enchantability: Int, equipSound: RegistryEntry<SoundEvent?>, repairIngredientSupplier: Supplier<Ingredient?>, toughness: Float, knockbackResistance: Float, dyeable: Boolean): RegistryEntry<ArmorMaterial> {
         // Get the supported layers for the armor material

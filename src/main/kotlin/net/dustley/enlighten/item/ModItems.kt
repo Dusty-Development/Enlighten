@@ -1,8 +1,10 @@
 package net.dustley.enlighten.item
 
+import dev.emi.trinkets.api.client.TrinketRendererRegistry
 import net.dustley.enlighten.Enlighten
 import net.dustley.enlighten.fluid.ModFluids
-import net.dustley.enlighten.item.armor.MireCloak
+import net.dustley.enlighten.item.armor.MireCloakItem
+import net.dustley.enlighten.item.trinket.mire_flower_clip.MireFlowerClipItem
 import net.dustley.enlighten.item.tool.begrimed_chorus_fruit.BegrimedChorusFruitItem
 import net.dustley.enlighten.item.tool.contract.EnlightenmentContractItem
 import net.dustley.enlighten.item.tool.contract.WishContractItem
@@ -10,6 +12,9 @@ import net.dustley.enlighten.item.tool.ebonized_wish.EbonizedWishItem
 import net.dustley.enlighten.item.tool.snare_stone.SnareStoneItem
 import net.dustley.enlighten.item.tool.snatch_slate.SnatchSlateItem
 import net.dustley.enlighten.item.tool.volumetric_anchor.VolumetricAnchorItem
+import net.dustley.enlighten.item.trinket.mire_flower_clip.MireFlowerClipRenderer
+import net.dustley.enlighten.item.trinket.mire_monocle.MireMonocleItem
+import net.dustley.enlighten.item.trinket.mire_monocle.MireMonocleRenderer
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents
@@ -44,7 +49,13 @@ object ModItems {
     val WISH_CONTRACT = registerItem("wish_contract", WishContractItem())
     val EBONIZED_WISH = registerItem("ebonized_wish", EbonizedWishItem())
 
-    val MIRE_CLOAK = registerItem("mire_cloak", MireCloak())
+    val MIRE_CLOAK = registerItem("mire_cloak", MireCloakItem())
+    val MIRE_ROSE_CLIP = registerItem("mire_rose_clip", MireFlowerClipItem())
+    val MIRE_DANDELION_CLIP = registerItem("mire_dandelion_clip", MireFlowerClipItem())
+    val MIRE_PEONY_CLIP = registerItem("mire_peony_clip", MireFlowerClipItem())
+    val MIRE_LILY_CLIP = registerItem("mire_lily_clip", MireFlowerClipItem())
+    val MIRE_WISP_CLIP = registerItem("mire_wisp_clip", MireFlowerClipItem())
+    val MIRE_MONOCLE = registerItem("mire_monocle", MireMonocleItem())
 
     private fun registerItem(name: String, item: Item): Item {
         val it = Registry.register(Registries.ITEM, Enlighten.identifier(name), item)
@@ -60,7 +71,6 @@ object ModItems {
                 entries.add(BEGRIMED_MIRE_BUCKET)
                 entries.add(BEGRIMED_MIRE_CLOTH)
                 entries.add(VOLUMETRIC_ANCHOR)
-//                entries.add(SHARD_CANNON)
                 entries.add(SNARE_STONE)
             })
 
@@ -69,9 +79,39 @@ object ModItems {
                 entries.add(BEGRIMED_CHORUS_FRUIT)
             })
 
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL)
+            .register(ItemGroupEvents.ModifyEntries { entries: FabricItemGroupEntries ->
+                entries.add(MIRE_ROSE_CLIP)
+                entries.add(MIRE_DANDELION_CLIP)
+                entries.add(MIRE_PEONY_CLIP)
+                entries.add(MIRE_LILY_CLIP )
+                entries.add(MIRE_WISP_CLIP )
+                entries.add(MIRE_MONOCLE)
+            })
+
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
             .register(ItemGroupEvents.ModifyEntries { entries: FabricItemGroupEntries ->
                 entries.add(MIRE_CLOAK)
+                entries.add(MIRE_ROSE_CLIP)
+                entries.add(MIRE_DANDELION_CLIP)
+                entries.add(MIRE_PEONY_CLIP)
+                entries.add(MIRE_LILY_CLIP)
+                entries.add(MIRE_WISP_CLIP)
+                entries.add(MIRE_MONOCLE)
             })
+    }
+
+    fun registerClientModItems() {
+        // peony
+        // rose
+        // dandelion
+        // lily
+        // wisp
+        TrinketRendererRegistry.registerRenderer(MIRE_ROSE_CLIP, MireFlowerClipRenderer("rose"))
+        TrinketRendererRegistry.registerRenderer(MIRE_DANDELION_CLIP, MireFlowerClipRenderer("dandelion"))
+        TrinketRendererRegistry.registerRenderer(MIRE_PEONY_CLIP, MireFlowerClipRenderer("peony"))
+        TrinketRendererRegistry.registerRenderer(MIRE_LILY_CLIP, MireFlowerClipRenderer("lily"))
+        TrinketRendererRegistry.registerRenderer(MIRE_WISP_CLIP, MireFlowerClipRenderer("wisp"))
+        TrinketRendererRegistry.registerRenderer(MIRE_MONOCLE, MireMonocleRenderer())
     }
 }

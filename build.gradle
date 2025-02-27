@@ -39,7 +39,7 @@ repositories {
 		url = uri("https://maven.tterrag.com/")
 	}
 	maven {
-		name = "BlameJared maven"
+		name = "BlameJared maven (CrT / Bookshelf)"
 		url = uri("https://maven.blamejared.com/")
 	}
 	maven {
@@ -81,22 +81,6 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 	modImplementation "net.fabricmc:fabric-language-kotlin:${project.fabric_kotlin_version}"
 
-	// AAA Particles
-//	modImplementation "maven.modrinth:aaa-particles:${project.aaa_particle_version}"
-//	modImplementation "maven.modrinth:architectury-api:${project.architecture_version}+fabric"
-
-	//Sodium
-//	compileOnly("maven.modrinth:sodium:${project.sodium_version}")
-//	compileOnly("maven.modrinth:iris:${project.iris_version}")
-
-	// GeckoLib
-//	modImplementation "software.bernie.geckolib:geckolib-fabric-${project.minecraft_version}:${project.geckolib_version}"
-
-	// Lodestone
-//	modImplementation("curse.maven:lodestone-616457:5956509")
-//	modImplementation("team.lodestar.lodestone:lodestone:${project.minecraft_version}-${project.lodestone_version}")
-//	modImplementation("maven.modrinth:bN3xUWdo:${project.minecraft_version}-${project.lodestone_version}-fabric")
-
 	// Cardinal Components
 	modImplementation "org.ladysnake.cardinal-components-api:cardinal-components-base:${project.cca_version}"
 	modImplementation "org.ladysnake.cardinal-components-api:cardinal-components-entity:${project.cca_version}"
@@ -111,18 +95,9 @@ dependencies {
 	include "org.ladysnake.cardinal-components-api:cardinal-components-block:${project.cca_version}"
 
 	modImplementation("dev.emi:trinkets:${project.trinkets_version}")
-//	modImplementation("com.jamieswhiteshirt:reach-wish_contract-attributes:${project.reach_entity_attributes_version}")
 
+	modImplementation("foundry.veil:veil-fabric-${project.minecraft_version}:${project.veil_version}") { exclude group: "maven.modrinth" }
 
-//	def portLibVersion = project.property('port_lib_version')
-//	def portLibModules = project.property('port_lib_modules').split(',')
-//
-//	portLibModules.each { module ->
-//		dependencies {
-//			include "io.github.fabricators_of_create.Porting-Lib:${module}:${portLibVersion}"
-//			modApi "io.github.fabricators_of_create.Porting-Lib:${module}:${portLibVersion}"
-//		}
-//	}
 }
 
 processResources {
